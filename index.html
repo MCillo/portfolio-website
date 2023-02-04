@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>765 Productions</title>
+    <!--Link to my favicon-->
+    <link rel="shortcut icon" href="img/second-chance-favicon.svg">
+    <!-- these links are used to embed the fonts picked from Google Fonts into the website as a part of the sites style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- this link is used to override default style of site and normalize CSS-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- this link is to my styles.css file to style my pages-->
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="page-header">
+        <!--A placeholder to put a logo in at a later time-->
+        <img src="img/second-chance-logo.svg" alt="" class="page-header__item">
+        <!--Links to other pages on the site-->
+        <nav class="main-navigation page-header__item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a href="index.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item--active">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+                </li>
+                <li role="presentation">
+                    <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+                </li>
+                <li role="presentation">
+                    <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile">
+            <!-- a blank image placeholder for a portrait of me-->
+            <img src="img/funny-face.jpeg" class="profile__portrait" alt="Michael Cillo Portrait">
+
+            <h1>Hello World!</h1>
+
+            <p>
+                My name is Michael Cillo. I am trying to become a web developer, this site will help you get to know me
+                a little bit better.
+            </p>
+            <a href="about.html">Check out some of my code</a><br>
+
+        </div>
+    </main>
+
+    <!-- Footer with links to social media profiles -->
+    <footer class="page-footer">
+        <p>Find me on</p>
+        <div class="social-media">
+            <img src="img/211904_social_github_icon.svg" alt="Github">
+            <img src="img/5296516_tweet_twitter_twitter logo_icon.svg" alt="Twitter">
+            <img src="img/386655_linkedin_linked in_icon.svg" alt="LinkedIn">
+        </div>
+    </footer>
+
+
+    <!--Script for tota11y tool to check Web Accessibility-->
+    <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
