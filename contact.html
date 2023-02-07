@@ -42,7 +42,6 @@
         </nav>
     </header>
     <section class="profile">
-        <!--<main>-->
         <!--Creating a grid for my contact information and contact form-->
 
         <div>
@@ -64,28 +63,35 @@
             <!-- Form from Exercise 1.4-->
             <div class="contact-grid__item">
                 <form action="" method="post" id="contact-form">
-
+                    
                     <div class="contact-form-grid">
-
+                        <!--this div is for the name field of the form-->
                         <div class="contact-form-grid__item">
-                            <label class="contact-form__item" for="name">Name *</label>
-                            <input type="text" name="name" id="name-field">
+                            <input type="text" id="name" class="contact-form__item" value="Your Name" onfocus="this.value='' "><br>
+                            <label class="contact-form__label" for="name"> * Name</label>
                         </div>
+                        <!--this div is for the email field of the form-->
                         <div class="contact-form-grid__item">
-                            <label class="standard-label" for="contact-email">E-mail: </label>
-                            <input type="email" id="contact-email">
+                            <input type="email" id="email" class="contact-form__item" value="Your Email" onfocus="this.value=''" ><br>
+                            <label for="email"> * EMail </label>
                         </div>
+                        <!--this div is for the contact phone number field of the form-->
                         <div class="contact-form-grid__item">
-                            <label class="standard-label" for="contact-phone">Telephone: </label>
-                            <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" name="" id="contact-phone">
+                            <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-phone" class="contact-form__item" onfocus="this.value=''" ><br>
+                            <label class="standard-label" for="contact-phone"> * Telephone </label>
                         </div>
+                        <!--this div is for the message field of the form-->
                         <div class="contact-form-grid__item">
-                            <label class="standard-label" for="contact-message">Message: </label>
-                            <textarea required maxlength="240" name="" id="contact-message"></textarea>
+                            <textarea required maxlength="240" id="contact-message" class="contact-form__item" value="Your Message" onfocus="this.value=''" ></textarea><br>
+                            <label class="standard-label" for="contact-message"> * Message </label>
                         </div>
                         <div class="contact-form-grid__item">
                             <button type="button">Submit</button>
                         </div>
+
+                        <p class="warning-text">
+                            * Denotes a required field.
+                        </p>
                         <!-- the original way to submit values from the form 
                         <input type="submit" value="Send message">
                         -->
@@ -109,8 +115,10 @@
                 </a>
             </div>
         </footer>
-        <!--Script for tota11y tool to check Web Accessibility-->
+        <!--Script for tota11y tool to check Web Accessibility
         <script src="js/tota11y.min.js"></script>
+        -->
+    </section>
 </body>
 
 </html>
