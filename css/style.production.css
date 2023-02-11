@@ -2,26 +2,15 @@
 this clears out the contents of the :root {} causing a "Do not use empty rulesets error
 */
 
-<<<<<<< HEAD
-=======
-/* learning CSS variables from Exercise 1.8 */
->>>>>>> 75b3242ac9b8c53eb38730eff81e8d0b57167377
 :root {
     --primary-color: #357b70;
     --secondary-color: #e0b354;
     /*this color is on the button*/
-<<<<<<< HEAD
     --primary-color: #357b70;
     --secondary-color: #e0b354;
     /*this color is on the button*/
     --dark-grey: #2b2b2b;
 
-=======
-    --dark-grey: #2b2b2b;
-
-    --warning-text: #f00;
-
->>>>>>> 75b3242ac9b8c53eb38730eff81e8d0b57167377
     --visited-link__color: #05676e;
     --focus-link__color: #00f;
     --active-link__color: #f00;
@@ -34,13 +23,6 @@ this clears out the contents of the :root {} causing a "Do not use empty ruleset
     --table-header-item__color: #003d9e;
     
     --grid-item__color: #52abdc;
-<<<<<<< HEAD
-=======
-}
-
-.warning-text {
-    color: var(--warning-text);
->>>>>>> 75b3242ac9b8c53eb38730eff81e8d0b57167377
 }
 
 a {
@@ -153,6 +135,10 @@ button:focus,
     font-weight: var(--smaller-font__weight);
 }
 
+td {
+    text-align: center;
+}
+
 .profile__portrait {
     float: left;
     width: 250px;
@@ -205,13 +191,10 @@ button:focus,
 }
 
 .grid {
-    padding: 20px;
+    padding: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* this code is obsolete according to VS Code app it said use row-gap, column-gap, or simply gap instead
-    grid-gap: 20px;
-    */
-    gap: 20px;
+    gap: 10px;
 }
 
 .grid__item:last-child {
@@ -220,9 +203,12 @@ button:focus,
 }
 
 .grid__item {
+    display: flex;
+    align-items: center;
     padding: 20px;
     background-color: var(--grid-item__color);
     transition: 0.9 opacity;
+    border-radius: 5%;
 }
 
 /* messing around with a transition for the grid items on the work page*/
@@ -265,7 +251,7 @@ button:focus,
     border-bottom: 2px solid #000;
     outline: none;
 
-    /*
+    /* trying things for the contact form
     width: 100%;
     padding: 10px 0;
     background: none;
@@ -280,12 +266,8 @@ button:focus,
 }
 
 table {
-    table-layout: fixed;
+    table-layout:auto;
     width: 100%;
-}
-
-.table-header__item {
-    padding: 5px;
 }
 
 tbody td {
