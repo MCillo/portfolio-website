@@ -13,8 +13,9 @@
     <!-- this link is used to override default style of site and normalize CSS-->
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <!-- this link is to my css file to style my pages-->
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <!-- this link is to my styles.css file to style my pages-->
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -22,23 +23,26 @@
     <header class="page-header">
         <!--Site Logo-->
         <a href="index.html">
-        <img src="img/second-chance-logo.svg" alt="" class="page-header__item">
-        </a>
+            <img class="logo" src="img/second-chance-logo.svg" alt="logo">
+        </a>        
         <!--Links to other pages on the site-->
-        <nav class="main-navigation page-header__item">
-            <ul role="menubar" class="navigation-list">
+        <nav>
+            <ul role="menubar" class="nav_links">
                 <li role="presentation">
-                    <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                    <!--
+                    <a href="index.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item--active">Home</a>
+                    -->
+                    <a href="index.html" role="menuitem">Home</a>
                 </li>
                 <li role="presentation">
-                    <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+                    <a href="about.html" role="menuitem">About Me</a>
                 </li>
                 <li role="presentation">
-                    <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+                    <a href="work.html" role="menuitem">Work</a>
                 </li>
                 <li role="presentation">
-                    <a href="contact.html" role="menuitem"
-                        class="navigation-list__item navigation-list__item--active">Contact</a>
+                    <a href="contact.html" role="menuitem">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -47,13 +51,14 @@
         <!--Creating a grid for my contact information and contact form-->
 
         <div>
-            <h1>Contact Me</h1>
+            <h1 class="section_header">Contact Me</h1>
         </div>
 
         <div class="contact-grid">
 
             <div class="contact-grid__item">
-                <!--For now I will use fake address and telephone information for my contact info-->
+                <!-- Contact Info -->
+                <h3>Contact me for more information or just to chat</h3>
                 Michael Cillo <br>
                 123 Anystreet<br>
                 Anytown, Georgia<br>
@@ -62,7 +67,7 @@
                 <!--I will use my real email so that I can test this function-->
                 <a href="mailto:michael.cillo@me.com">Email Me: michael.cillo@me.com</a>
             </div>
-            <!-- Form from Exercise 1.4-->
+            <!-- Contact Form -->
             <div class="contact-grid__item">
                 <form action="" method="post" id="contact-form">
                     
@@ -103,22 +108,23 @@
         </div>
         <!--</main>-->
         <!-- Footer with links to social media profiles -->
-        <footer class="page-footer">
-            <p>Find me on</p>
-            <div class="social-media">
-                <a href="https://github.com/MCillo/portfolio-website.git" target="_blank" rel="noopener">
-                    <img src="img/211904_social_github_icon.svg" alt="Github">
-                </a>
-                <!--
-                <a href="">
-                    <img src="img/5296516_tweet_twitter_twitter logo_icon.svg" alt="Twitter">
-                </a>
-                -->
-                <a href="https://www.linkedin.com/in/michael-cillo-37b6997" target="_blank">
-                    <img src="img/386655_linkedin_linked in_icon.svg" alt="LinkedIn">
-                </a>
-            </div>
-        </footer>
+    <footer class="page-footer">
+        <p>Find me on</p>
+        <div class="social-media">
+            <!-- Link to GitHub In for visitors to follow me -->
+            <a href="https://github.com/MCillo/portfolio-website.git" target="_blank" rel="noopener">
+                <img src="img/211904_social_github_icon.svg" alt="Github">
+            </a>
+            <!-- Link to Twitter In for visitors to follow me -->
+            <a href="https://twitter.com/MCillo1">
+                <img src="img/5296516_tweet_twitter_twitter_logo_icon.svg" alt="Twitter">
+            </a>
+            <!-- Link to Linked In for visitors to follow me -->
+            <a href="https://www.linkedin.com/in/michael-cillo-37b6997" target="_blank">
+                <img src="img/386655_linkedin_linked_in_icon.svg" alt="LinkedIn">
+            </a>
+        </div>
+    </footer>
         <!--Script for tota11y tool to check Web Accessibility
         <script src="js/tota11y.min.js"></script>
         -->
