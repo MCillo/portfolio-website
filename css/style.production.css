@@ -3,7 +3,8 @@ this clears out the contents of the :root {} causing a "Do not use empty ruleset
 */
 
 :root {
-    --primary-color: #357b70;
+    --text-color: #fff;
+    --primary-color: #fff;
     --secondary-color: #e0b354;
     /*this color is on the button*/
     --primary-color: #357b70;
@@ -23,10 +24,14 @@ this clears out the contents of the :root {} causing a "Do not use empty ruleset
     --table-header-item__color: #003d9e;
     
     --grid-item__color: #52abdc;
+    /*for changing background color
+    --background-color:
+    */
 }
 
 a {
     color: var(--primary-color);
+    font-size: 20px;
 }
 
 a:visited {
@@ -60,6 +65,7 @@ h1 {
     font-family: 'Orbitron';
     font-size: 30px;
     font-weight: var(--larger-font-weight);
+    color: var(--text-color);
 }
 
 h2 {
@@ -169,16 +175,16 @@ td {
 .page-header {
     display: flex;
     width: 100%;
-    padding: 20px;
+    padding: 10px 50px 10px 75px;
 }
 
 .page-header__item {
-    flex: 0 1 200px;
+    flex: 0 1 300px;
 }
 
 .page-header__item:last-child {
     flex-grow: 1;
-    text-align: right;
+    text-align: right; 
 }
 
 .navigation-list {
