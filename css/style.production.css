@@ -2,15 +2,14 @@
 this clears out the contents of the :root {} causing a "Do not use empty rulesets error
 */
 
+/* learning CSS variables from Exercise 1.8 */
 :root {
-    --text-color: #fff;
-    --primary-color: #fff;
-    --secondary-color: #e0b354;
-    /*this color is on the button*/
     --primary-color: #357b70;
     --secondary-color: #e0b354;
     /*this color is on the button*/
     --dark-grey: #2b2b2b;
+
+    --warning-text: #f00;
 
     --visited-link__color: #05676e;
     --focus-link__color: #00f;
@@ -24,14 +23,14 @@ this clears out the contents of the :root {} causing a "Do not use empty ruleset
     --table-header-item__color: #003d9e;
     
     --grid-item__color: #52abdc;
-    /*for changing background color
-    --background-color:
-    */
+}
+
+.warning-text {
+    color: var(--warning-text);
 }
 
 a {
     color: var(--primary-color);
-    font-size: 20px;
 }
 
 a:visited {
@@ -58,14 +57,15 @@ a:active {
     font-size: 16px;
     /* this sets the line-height to 1.6 */
     line-height: 1.6;
-}
 
+ background-image: linear-gradient(#A4BFEF, #6A93CB);  
+
+}
 /* the h element selectors are using the Orbitron font for learning purposes */
 h1 {
     font-family: 'Orbitron';
     font-size: 30px;
     font-weight: var(--larger-font-weight);
-    color: var(--text-color);
 }
 
 h2 {
@@ -141,10 +141,6 @@ button:focus,
     font-weight: var(--smaller-font__weight);
 }
 
-td {
-    text-align: center;
-}
-
 .profile__portrait {
     float: left;
     width: 250px;
@@ -175,16 +171,18 @@ td {
 .page-header {
     display: flex;
     width: 100%;
-    padding: 10px 50px 10px 75px;
+    padding: 20px;
 }
 
 .page-header__item {
-    flex: 0 1 300px;
+    flex: 0 1 200px;
+    /*width: 50%;*/
+    width: 50%;
 }
 
 .page-header__item:last-child {
     flex-grow: 1;
-    text-align: right; 
+    text-align: right;
 }
 
 .navigation-list {
@@ -197,10 +195,13 @@ td {
 }
 
 .grid {
-    padding: 10px;
+    padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    /* this code is obsolete according to VS Code app it said use row-gap, column-gap, or simply gap instead
+    grid-gap: 20px;
+    */
+    gap: 20px;
 }
 
 .grid__item:last-child {
@@ -209,12 +210,9 @@ td {
 }
 
 .grid__item {
-    display: flex;
-    align-items: center;
     padding: 20px;
     background-color: var(--grid-item__color);
     transition: 0.9 opacity;
-    border-radius: 5%;
 }
 
 /* messing around with a transition for the grid items on the work page*/
@@ -257,7 +255,7 @@ td {
     border-bottom: 2px solid #000;
     outline: none;
 
-    /* trying things for the contact form
+    /*
     width: 100%;
     padding: 10px 0;
     background: none;
@@ -272,8 +270,12 @@ td {
 }
 
 table {
-    table-layout:auto;
+    table-layout: fixed;
     width: 100%;
+}
+
+.table-header__item {
+    padding: 5px;
 }
 
 tbody td {
