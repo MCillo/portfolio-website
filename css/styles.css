@@ -3,10 +3,9 @@
 /* Declaring variables to use sitewide*/
 :root {
     /* primary colors for site */
-    --primary-text__color: #0e2f44;
-    --secondary-text__color: #0a1e2d;
+    --primary-text__color: white;
+    --secondary-text__color: white;
     /* define color
-    --tertiary-text__color: ;
     */
 
     /* link colors */
@@ -20,9 +19,9 @@
 
     --table-header-item__color: #003d9e;
 
-    --grid-item__color: #52abdc;
+    --grid-item__color: #525455;
     /* background color */
-    --background-color: #c0c0c0;
+    --background-color: black;
 }
 
 /* site wide styling */
@@ -46,7 +45,7 @@ li,
 a,
 p,
 button {
-    font-size: 20px;
+    font-size: 16px;
     color: var(--secondary-text__color);
     text-decoration: none;
 }
@@ -134,10 +133,10 @@ button:hover {
 /* code for index.html */
 .profile__portrait {
     float: left;
-    width: 250px;
+    width: 150px;
     margin-right: 40px;
     border-radius: 30%;
-    border: 2px solid #000;
+    border: 2px solid white;
 }
 
 /* code for about.html */
@@ -179,7 +178,8 @@ tbody td {
     padding: 20px;
     background-color: var(--grid-item__color);
     transition: 0.9 opacity;
-    border: 2px solid #000;
+    border: 2px solid white;
+    border-radius: 15px;
     text-align: center;
 }
 
@@ -201,6 +201,7 @@ tbody td {
     grid-template-columns: 1fr 1fr;
     gap: 5px;
 }
+
 .contact-grid__item :last-child {
     grid-column: 1 / 2;
 }
@@ -208,7 +209,7 @@ tbody td {
 .contact-grid__item {
     padding: 25px;
     font-size: 20px;
-    border: 2px solid #000;
+    border: 2px solid white;
     border-radius: 5px;
 }
 
@@ -227,7 +228,7 @@ tbody td {
     width: 100%;
     padding: 10px 0;
     border: none;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid white;
     outline: none;
 
     /* trying things for the contact form
