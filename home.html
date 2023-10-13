@@ -1,50 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/styles2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
+
 <body>
-    <header>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Michael Cillo</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor02">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">Home
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="work.html">My Works</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact Me</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-</header>
+  <header>
+    <!-- think about a sidebar for faster navigation -->
+  </header>
 
-<main>
+  <main>
+    <div class="container">
+      <div class="slides">
+        <div class="profile">
+          <!-- a portrait of me -->
+          <img src="img/hard_at_work.jpeg" class="profile__portrait" alt="Michael Cillo Hard at Work">
 
-</main>
+          <h1 class="section_header">Well Hello There!</h1>
 
-<footer>
+          <p>
+            My name is Michael Cillo. I am trying to become a web developer, this site will help you get to know me
+            a little bit better. As of right now this is all still a work in progress so please bear with me.
+          </p>
+          <a href="work.html">Check out some of my Projects</a><br>
+
+        </div>
+      </div>
+      <div class="slides">
+        <div class="profile">
+          <h1 class="section_header">A Little Bit About Me</h1>
+          <p>
+            My name is Michael Cillo. I currently live in Augusta, GA. I am 42 years old and currently work in the
+            Beverage Industry at <a href="https://augustaliquors.com" target="_blank" rel="noopener">Augusta
+              Liquors.</a>
+          </p>
+          <br>
+          <p>
+            Some of the things I enjoy doing include:
+          </p>
+          <ul>
+            <li>Playing video games</li>
+            <li>Woodworking</li>
+            <li>Hiking</li>
+            <li>Learning Full Stack web development</li>
+          </ul>
+          <!--
+              <a href="file/cv.pdf" class="button" download="">Download my CV</a>
+              -->
+          <table>
+            <thead>
+              <tr>
+                <td class="table-header__item">Skills</td>
+                <td class="table-header__item">Years of Experience</td>
+                <td class="table-header__item">Level of Expertise</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HTML</td>
+                <td>1</td>
+                <td>Beginner</td>
+              </tr>
+              <tr>
+                <td>CSS</td>
+                <td>1</td>
+                <td>Beginner</td>
+              </tr>
+              <tr>
+                <td>JavaScript</td>
+                <td>1</td>
+                <td>Beginner</td>
+              </tr>
+              <tr>
+                <td>Customer Service</td>
+                <td>19</td>
+                <td>Expert</td>
+              </tr>
+              <tr>
+                <td>Management</td>
+                <td>15</td>
+                <td>Proficient</td>
+              </tr>
+              <tr>
+                <td>Communication</td>
+                <td>25</td>
+                <td>Proficient</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <div class="slides">
+          <div class="grid">
+            <!-- Grid items will be here -->
+            <div class="grid__item">
+              <h2 class="work_grid__text">Pokedex Web App</h2>
+              <p class="work_grid__text">
+                This is the first responsive web app that I created on my journey into the world of Web Development. It
+                is a simple app that retrieves information from an external API and displays it for the user. I used
+                HTML, CSS, and JavaScript in the creation of this app.
+              </p>
+              <a href="https://mcillo.github.io/simple-js-app/">Pokedex Web App</a>
+              <a href="https://github.com/MCillo/simple-js-app.git">See project on GitHub</a>
+            </div>
+            <div class="grid__item">
+              <h2 class="work_grid__text">Movie API</h2>
+              <p class="work_grid__text">
+                This project was my initial foray into creating my very own REST API. In this project I used REACT to
+                build a server side component to a "Movies" Web APP. This project also uses MongoDB as the Database that
+                holds all the movie information.
+              </p>
+              <!-- <a href="https://github.com/MCillo/movie_api.git"></a> -->
+              <a href="https://github.com/MCillo/movie_api.git">See project on GitHub</a>
+            </div>
+            <div class="grid__item">
+              <h2 class="work_grid__text">My Flix Client</h2>
+              <p class="work_grid__text">
+                This project uses REACT to create the client side for a Single Page Application that works with Movie
+                API to display movie information to the user.
+              </p>
+              <a href="https://myflix765.netlify.app/login">MyFlix</a>
+              <a href="https://github.com/MCillo/myFlix-client.git">See project on GitHub</a>
+            </div>
+            <div class="grid__item">
+              <h2 class="work_grid__text">Meet App</h2>
+              <p class="work_grid__text">
+                This project taught me to use a Test Driven Development approach using REACT to build a serverless,
+                Progressive Web Application. This application uses the Google Calendar API to fetch upcoming events.
+              </p>
+              <a href="https://mcillo.github.io/meet/">Meet App</a>
+              <a href="https://github.com/MCillo/meet.git">See project on GitHub</a>
+            </div>
+            <div class="grid__item">
+              <h2 class="work_grid__text">Project #5</h2>
+              <p class="work_grid__text">
+                This will be the description for the Fifth Project I do. It will list the function and reasoning
+                for the project.
+              </p>
+              <a href="#">See project on GitHub</a>
+            </div>
+            <div class="grid__item">
+              <h2 class="work_grid__text">Project #6</h2>
+              <p class="work_grid__text">
+                This will be the description for the Sixth Project I do. It will list the function and reasoning
+                for the project.
+              </p>
+              <a href="#">See project on GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="slides">
+          <div>
+            <h1 class="section_header">Contact Me</h1>
+          </div>
+
+          <div class="contact-grid">
+
+            <div class="contact-grid__item">
+              <!-- Contact Info -->
+              <h3>Contact me for more information or just to chat</h3>
+              Michael Cillo <br>
+              123 Anystreet<br>
+              Anytown, Georgia<br>
+              USA<br>
+              Telephone: <a href="tel:7062318491">Call me @ (123) 456-7890</a><br>
+              <!--I will use my real email so that I can test this function-->
+              <a href="mailto:michael.cillo@me.com">Email Me: michael.cillo@me.com</a>
+            </div>
+            <!-- Contact Form -->
+            <div class="contact-grid__item">
+              <form action="" method="post" id="contact-form">
+
+                <div class="contact-form-grid">
+                  <!--this div is for the name field of the form-->
+                  <div class="contact-form-grid__item">
+                    <input type="text" id="name" class="contact-form__item" value="Your Name"
+                      onfocus="this.value='' "><br>
+                    <label class="contact-form__label" for="name"> * Name</label>
+                  </div>
+                  <!--this div is for the email field of the form-->
+                  <div class="contact-form-grid__item">
+                    <input type="email" id="email" class="contact-form__item" value="Your Email"
+                      onfocus="this.value=''"><br>
+                    <label for="email"> * Email </label>
+                  </div>
+                  <!--this div is for the contact phone number field of the form-->
+                  <div class="contact-form-grid__item">
+                    <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-phone" class="contact-form__item"
+                      onfocus="this.value=''"><br>
+                    <label class="standard-label" for="contact-phone"> * Telephone </label>
+                  </div>
+                  <!--this div is for the message field of the form-->
+                  <div class="contact-form-grid__item">
+                    <textarea required maxlength="240" id="contact-message" class="contact-form__item"
+                      value="Your Message" onfocus="this.value=''"></textarea><br>
+                    <label class="standard-label" for="contact-message"> * Message </label>
+                  </div>
+                  <div class="contact-form-grid__item">
+                    <button type="button">Submit</button>
+                  </div>
+
+                  <p class="warning-text">
+                    * Denotes a required field.
+                  </p>
+                  <!-- the original way to submit values from the form 
+                        <input type="submit" value="Send message">
+                        -->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <footer>
 
 
-</footer>
+  </footer>
 
 
 </body>
+
 </html>
