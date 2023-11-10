@@ -2,90 +2,186 @@
 <html lang="en">
 
 <head>
-    <title>Michael Cillo Productions</title>
-    <!--Link to my favicon-->
-    <link rel="shortcut icon" href="img/second-chance-favicon.svg">
-    <!-- these links are used to embed the fonts picked from Google Fonts into the website as a part of the sites style-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Orbitron:wght@400;700&display=swap"
-        rel="stylesheet">
-    <!-- this link is used to override default style of site and normalize CSS-->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <!-- this link is to my styles.css file to style my pages-->
-    <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Michael Cillo Personal Portfolio </title>
 </head>
 
 <body>
-    <header class="page-header">
-        <!--Site Logo-->
-        <!-- <a href="index.html">
-            <img class="logo" src="img/second-chance-logo.svg" alt="logo">
-        </a>         -->
-        <!--Links to other pages on the site-->
-        <nav>
-            <ul role="menubar" class="nav_links">
-                <li role="presentation">
-                    <!--
-                    <a href="index.html" role="menuitem"
-                        class="navigation-list__item navigation-list__item--active">Home</a>
-                    -->
-                    <a href="index.html" role="menuitem">Home</a>
-                </li>
-                <li role="presentation">
-                    <a href="about.html" role="menuitem">About Me</a>
-                </li>
-                <li role="presentation">
-                    <a href="work.html" role="menuitem">Work</a>
-                </li>
-                <li role="presentation">
-                    <a href="contact.html" role="menuitem">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <div class="profile">
-            <!-- a portrait of me -->
-            <img src="img/hard_at_work.jpeg" class="profile__portrait" alt="Michael Cillo Hard at Work">
+    <!-- -------------Intro Section------------- -->
 
-            <h1 class="section_header">Well Hello There!</h1>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/logo.png" class="logo" alt="">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring Full Stack Web Developer</p>
+                <h1>Hello, I'm <span>Mike</span><br>from the USA</h1>
+            </div>
+        </div>
+    </div>
 
-            <p>
-                My name is Michael Cillo. I am trying to become a web developer, this site will help you get to know me
-                a little bit better. As of right now this is all still a work in progress so please bear with me.
-            </p>
-            <a href="work.html">Check out some of my Projects</a><br>
+    <!-- -------------About Section------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/user.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Mobile App Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023</span><br>Full Stack Web Development</li>
+                            <li><span>2016-Present</span><br>Assistant Management</li>
+                            <li><span>2004-Present</span><br>Retail Sales</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2001</span><br>Primary Leadership Development Course</li>
+                            <li><span>2008</span><br>BA Information Technology</li>
+                            <li><span>2023</span><br>Career Foundry Full Stack Developer Course</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------Portfolio Section-------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work-item">
+                    <h2 class="work-title">Pokedex Web App</h2>
+                    <p class="work-text">This is the first responsive web app that I created on my journey into the
+                        world of Web Development. It is a simple app that retrieves information from an external API and
+                        displays it for the user. I used HTML, CSS, and JavaScript in the creation of this app.</p>
+                    <a href="https://mcillo.github.io/simple-js-app/" target="_blank" rel="noopener">Pokedex Web App</a>
+                    <a href="https://github.com/MCillo/simple-js-app.git" target="_blank" rel="noopener">See project on
+                        GitHub</a>
+                </div>
+                <div class="work-item">
+                    <h2 class="work-title">Movie API</h2>
+                    <p class="work-text">
+                        This project was my initial foray into creating my very own REST API. In this project I used
+                        REACT to build a server side component to a "Movies" Web APP. This project also uses MongoDB as
+                        the Database that holds all the movie information.
+                    </p>
+                    <a href="https://github.com/MCillo/movie_api.git" target="_blank" rel="noopener">See project on
+                        GitHub</a>
+                </div>
+                <div class="work-item">
+                    <h2 class="work-title">My Flix Client</h2>
+                    <p class="work-text">
+                        This project uses REACT to create the client side for a Single Page Application that works with
+                        Movie API to display movie information to the user.
+                    </p>
+                    <a href="https://myflix765.netlify.app/login" target="_blank" rel="noopener">MyFlix</a>
+                    <a href="https://github.com/MCillo/myFlix-client.git" target="_blank" rel="noopener">See project on
+                        GitHub</a>
+                </div>
+                <div class="work-item">
+                    <h2 class="work-title">Meet App</h2>
+                    <p class="work-text">
+                        This project taught me to use a Test Driven Development approach using REACT to build a
+                        serverless, Progressive Web Application. This application uses the Google Calendar API to fetch
+                        upcoming events.
+                    </p>
+                    <a href="https://mcillo.github.io/meet/" target="_blank" rel="noopener">Meet App</a>
+                    <a href="https://github.com/MCillo/meet.git" target="_blank" rel="noopener">See project on
+                        GitHub</a>
+                </div>
+                <div class="work-item">
+                    <h2 class="work-title">Chat-App</h2>
+                    <p class="work-text">
+                        This project was built using React Native, Expo, and Google's Firestore Database. This was my
+                        first foray into developing a mobile web app.
+                    </p>
+                    <a href="https://github.com/MCillo/Chat-App.git" target="_blank" rel="noopener">See project on
+                        GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------Contact Section---------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>contact@example.com</p>
+                    <p>01234567898</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/MCillo/portfolio-website.git" target="_blank" rel="noopener">
+                            <img src="img/211904_social_github_icon.svg" alt="Github">
+                        </a>
+                        <a href="https://twitter.com/MCillo1">
+                            <img src="img/5296516_tweet_twitter_twitter_logo_icon.svg" alt="Twitter">
+                        </a>
+                        <a href="https://www.linkedin.com/in/michael-cillo-37b6997" target="_blank">
+                            <img src="img/386655_linkedin_linked_in_icon.svg" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" rows="10"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
 
         </div>
-    </main>
+    </div>
+    <script>
 
-    <!-- Footer with links to social media profiles -->
-    <footer class="page-footer">
-        <p>Find me on</p>
-        <div class="social-media">
-            <!-- Link to GitHub In for visitors to follow me -->
-            <a href="https://github.com/MCillo/portfolio-website.git" target="_blank" rel="noopener">
-                <img src="img/211904_social_github_icon.svg" alt="Github">
-            </a>
-            <!-- Link to Twitter In for visitors to follow me -->
-            <a href="https://twitter.com/MCillo1">
-                <img src="img/5296516_tweet_twitter_twitter_logo_icon.svg" alt="Twitter">
-            </a>
-            <!-- Link to Linked In for visitors to follow me -->
-            <a href="https://www.linkedin.com/in/michael-cillo-37b6997" target="_blank">
-                <img src="img/386655_linkedin_linked_in_icon.svg" alt="LinkedIn">
-            </a>
-        </div>
-    </footer>
-    <!--  
-    Script for tota11y tool to check Web Accessibility
-    <script src="js/tota11y.min.js"></script>
-    -->
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
 </body>
 
 </html>
