@@ -32,32 +32,9 @@ a:focus {
     transition: all 0.3s ease 0s;
 }
 
-a :visited {
-    color: #ff004f;
+body a:visited {
+    color: #ff004f !important;
 }
-
-/* a:link {
-    color: #115ad9;
-}
-
-a:visited {
-    color: #a5c300;
-}
-
-a:focus {
-    text-decoration: none;
-    background: #bae498;
-}
-
-a :hover {
-    text-decoration: none;
-    background: #cdfeaa;
-}
-
-a :active {
-    background: #6900ff;
-    color: #cdfeaa;
-} */
 
 #header {
     width: 100%;
@@ -99,7 +76,6 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    /* background: #ff004f; */
     background: #115AD9;
     position: absolute;
     left: 0;
@@ -122,11 +98,8 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    /* color: #5b5d73; */
-    /* color: #343540; */
     font-family: 'Archivo', sans-serif;
     color: var(--primary-text-color);
-    /* color: #115AD9; */
     text-shadow: 2px 2px 4px #ff004f;
 }
 
@@ -253,19 +226,19 @@ tbody td {
 .work-item {
     display: grid;
     padding: 20px;
-    background-color: #333335;
+    background-color: #ababab;
     transition: 0.9 opacity;
-    border: 2px solid #fff;
+    border: 5px solid #115AD9;
     border-radius: 15px;
     text-align: center;
 }
 
 .work-title {
-    color: #fff;
+    color: #115AD9;
 }
 
 .work-text {
-    color: #ababab;
+    color: #fff;
 }
 
 
