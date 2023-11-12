@@ -1,20 +1,67 @@
+/* Declaring variables to use sitewide*/
+:root {
+
+    /* primary colors for site */
+    --background-color: #041430;
+
+    --primary-text-color: #fff;
+    --secondary-text-color: #fff;
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    /* find another font to go with */
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+
 }
 
 body {
-    background: #080808;
-    color: #fff;
+    background: var(--background-color);
+    color: var(--primary-text-color);
 }
+
+a {
+    outline: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #115AD9;
+    transition: all 0.3s ease 0s;
+}
+
+a :visited {
+    color: #ff004f;
+}
+
+/* a:link {
+    color: #115ad9;
+}
+
+a:visited {
+    color: #a5c300;
+}
+
+a:focus {
+    text-decoration: none;
+    background: #bae498;
+}
+
+a :hover {
+    text-decoration: none;
+    background: #cdfeaa;
+}
+
+a :active {
+    background: #6900ff;
+    color: #cdfeaa;
+} */
 
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(img/background.png);
     background-size: cover;
     background-position: center;
 }
@@ -41,9 +88,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--primary-text-color);
     text-decoration: none;
     font-size: 18px;
+    font-weight: 300;
     position: relative;
 }
 
@@ -51,7 +99,8 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    /* background: #ff004f; */
+    background: #115AD9;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -73,7 +122,12 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: #ff004f;
+    /* color: #5b5d73; */
+    /* color: #343540; */
+    font-family: 'Archivo', sans-serif;
+    color: var(--primary-text-color);
+    /* color: #115AD9; */
+    text-shadow: 2px 2px 4px #ff004f;
 }
 
 /* ---------About Section-------- */
@@ -124,7 +178,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #115AD9;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -141,8 +195,9 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #b54769;
-    font-size: 14px;
+    color: #ff004f;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .tab-contents {
@@ -152,6 +207,28 @@ nav ul li a:hover::after {
 .tab-contents.active-tab {
     display: block;
 }
+
+/* --------- About me Experience tab contents ------- */
+.table-header__item {
+    color: #ff004f;
+    font-family: 'Archivo', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+td {
+    text-align: center;
+}
+
+table {
+    table-layout: auto;
+    width: 100%;
+}
+
+tbody td {
+    text-align: center;
+}
+
 
 /* -------Portfolio Section------- */
 #portfolio {
