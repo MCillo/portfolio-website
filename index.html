@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> <link rel="stylesheet" href="styles.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Michael Cillo Personal Portfolio </title>
 </head>
 
@@ -52,20 +53,21 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>
-                My name is Michael Cillo. I currently live in Augusta, GA. I am 42 years old and currently work in the
-                Beverage Industry at <a href="https://augustaliquors.com" target="_blank" rel="noopener">Augusta
-                    Liquors.</a>
-            </p>
-            <br>
-            <p>
-                Some of the things I enjoy doing include:
-            </p>
-            <ul>
-                <li>Playing video games</li>
-                <li>Woodworking</li>
-                <li>Hiking</li>
-                <li>Learning Full Stack web development</li>
-            </ul>
+                        My name is Michael Cillo. I currently live in Augusta, GA. I am 42 years old and currently work
+                        in the
+                        Beverage Industry at <a href="https://augustaliquors.com" target="_blank" rel="noopener">Augusta
+                            Liquors.</a>
+                    </p>
+                    <br>
+                    <p>
+                        Some of the things I enjoy doing include:
+                    </p>
+                    <ul>
+                        <li>Playing video games</li>
+                        <li>Woodworking</li>
+                        <li>Hiking</li>
+                        <li>Learning Full Stack web development</li>
+                    </ul>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -187,6 +189,14 @@
                     <a href="https://github.com/MCillo/Chat-App.git" target="_blank" rel="noopener">See project on
                         GitHub</a>
                 </div>
+                <div class="work-item">
+                    <h2 class="work-title">My Flix Angular Client</h2>
+                    <p class="work-text">
+                        This project was built using Angular and was a recreation of the My Flix Client that used JavaScript.
+                    </p>
+                    <a href="https://github.com/MCillo/MyFlix-Angular-Client.git" target="_blank" rel="noopener">See project on
+                        GitHub</a>
+                </div>
             </div>
         </div>
     </div>
@@ -211,12 +221,21 @@
                     </div>
                 </div>
                 <div class="contact-right">
-                    <form>
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Your Message" rows="10"></textarea>
-                        <button type="submit">Submit</button>
-                    </form>
+                    <div class="form-area">
+                        <div class="wrapper">
+                            <form action="" method="post" id="contact-form">
+                                <p>First Name:</p>
+                                <input type="text" placeholder="Enter First Name ...">
+                                <p>Last Name:</p>
+                                <input type="text" placeholder="Enter Last Name ...">
+                                <p>Your Email:</p>
+                                <input type="email" placeholder="Enter Email ...">
+                                <p>Message:</p>
+                                <textarea cols="30" rows="10" placeholder="Your Message ..."></textarea>
+                                <a href="#">Submit</a>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
 
