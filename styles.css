@@ -2,7 +2,7 @@
 :root {
 
     /* primary colors for site */
-    --background-color: #041430;
+    --background-color: #040e40;
 
     --primary-text-color: #fff;
     --secondary-text-color: #fff;
@@ -23,17 +23,18 @@ body {
 
 a {
     outline: none;
+    color: #9faef9;
 }
 
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #115AD9;
+    color: #4ecdff;
     transition: all 0.3s ease 0s;
 }
 
 body a:visited {
-    color: #ff004f !important;
+    color: #ff004f;
 }
 
 #header {
@@ -236,7 +237,7 @@ tbody td {
 
 .work-title {
     /* color: #115AD9; */
-    /* color: #041430; */
+    color: #041430;
     color: #fff;
     padding: 5px;
 }
