@@ -27,14 +27,14 @@
         <!-- <img src="img/logo.png" class="logo" alt=""> -->
         <!-- <img src="img/second-chance-logo-large.png" class="logo" alt=""> -->
         <!-- <a href="https://www.vecteezy.com/free-photos">Free Stock photos by Vecteezy</a> -->
-        <ul>
+        <ul id="sideMenu">
           <li><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
-          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
         </ul>
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
       </nav>
       <div class="header-text">
         <p>Aspiring Full Stack Web Developer</p>
@@ -209,22 +209,26 @@
       <div class="row">
         <div class="contact-left">
           <h1 class="sub-title">Contact Me</h1>
-          <p>contact@example.com</p>
-          <p>01234567898</p>
+          <p><i class="fa-regular fa-paper-plane"></i>michael.cillo@me.com</p>
+          <p><i class="fa-solid fa-square-phone"></i>(706) 831-7329</p>
           <div class="social-icons">
-            <i class="fa-brands fa-github"></i>
+
             <a href="https://github.com/MCillo/portfolio-website.git" target="_blank" rel="noopener">
               <!-- <img src="img/211904_social_github_icon.svg" alt="Github"> -->
+              <i class="fa-brands fa-github"></i>
             </a>
-            <i class="fa-brands fa-x-twitter"></i>
+
             <a href="https://twitter.com/MCillo1">
               <!-- <img src="img/5296516_tweet_twitter_twitter_logo_icon.svg" alt="Twitter"> -->
+              <i class="fa-brands fa-x-twitter"></i>
             </a>
-            <i class="fa-brands fa-linkedin"></i>
+
             <a href="https://www.linkedin.com/in/michael-cillo-37b6997" target="_blank">
               <!-- <img src="img/386655_linkedin_linked_in_icon.svg" alt="LinkedIn"> -->
+              <i class="fa-brands fa-linkedin"></i>
             </a>
           </div>
+          <a href="" class="btn btn2">Download CV</a>
         </div>
         <div class="contact-right">
           <div class="form-area">
@@ -248,7 +252,6 @@
     </div>
   </div>
   <script>
-
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -262,6 +265,18 @@
       event.currentTarget.classList.add("active-link");
       document.getElementById(tabname).classList.add("active-tab");
     }
+  </script>
+
+  <script>
+    var sideMenu = document.getElementById('sideMenu');
+    function openMenu() {
+      sideMenu.style.right = '0';
+    }
+
+    function closeMenu() {
+      sideMenu.style.right = '-200px';
+    }
+
   </script>
 
 </body>
