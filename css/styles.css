@@ -29,11 +29,16 @@ a:focus {
 #header {
     width: 100%;
     height: 100vh;
+    background: url(../img/dark-background.jpg);
+    /* background: url("img/dark-background.jpg"); */
+    /* background: url("/Users/michaelcillo/Desktop/School/Career Foundry/img/dark-background.jpg"); */
+    
     background-size: cover;
     background-position: center;
 }
 .container {
     padding: 10px 10%;
+    height: auto;
 }
 nav {
     display: flex;
@@ -85,7 +90,7 @@ nav ul li a:hover::after {
 /* ---------About Section-------- */
 #about {
     padding: 80px 0;
-    height: 90vh;
+    /* height: 90vh; */
     color: #ababab;
 }
 .row {
@@ -95,6 +100,7 @@ nav ul li a:hover::after {
 }
 .about-col-1 {
     flex-basis: 35%;
+    justify-content: center;
 }
 .about-col-1 img {
     width: 100%;
@@ -151,8 +157,8 @@ nav ul li a:hover::after {
 .table-header__item {
     color: #ff004f;
     font-family: 'Archivo', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 300;
 }
 td {
     text-align: center;
@@ -167,11 +173,12 @@ tbody td {
 /* -------Portfolio Section------- */
 #portfolio {
     padding: 80px 0;
-    height: 90vh;
+    /* height: 90vh; */
 }
 .work-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fit, min-max(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -202,35 +209,60 @@ tbody td {
     padding: 4px;
 }
 /* --------Contact Section-------- */
-#contact {
+/* #contact{
     padding: 80px 0;
     height: 90vh;
 }
-.row {
+.row{
   padding: 20px;
+} */
+.contact-left{
+  flex-basis: 35%;
+    /* align-items: center;
+    justify-content: center; */
 }
-.contact-left {
-    align-items: center;
-    justify-content: center;
+.contact-right{
+  flex-basis: 60%;
+    /* align-items: center; */
 }
-.contact-left p {
-    font-size: 24px;
-    margin-top: 15px;
+.contact-left p{
+    margin-top: 30px;
 }
-.contact-right {
-    align-items: center;
+.contact-left p i{
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
 }
-.form-area {
+.social-icons{
+  margin-top: 30px;
+}
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icons a:hover{
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+.btn.btn2{
+  display: inline-block;
+  background: #ff004f;
+}
+.form-area{
     display: grid;
     place-items: center;
 }
-.wrapper {
+.wrapper{
     color: #fff;
     padding: 50px 30px;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
     position: relative;
 }
-.wrapper::before {
+.wrapper::before{
     content: '';
     position: absolute;
     background: inherit;
@@ -242,12 +274,12 @@ tbody td {
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
     filter: blur(2px);
 }
-.wrapper p {
+.wrapper p{
     margin: 0;
     padding: 0;
     font-weight: 500;
 }
-.wrapper input {
+.wrapper input{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -258,7 +290,7 @@ tbody td {
     width: 100%;
     margin-bottom: 20px;
 }
-textarea {
+textarea{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -269,7 +301,7 @@ textarea {
     width: 100%;
     margin-bottom: 20px;
 }
-.wrapper a {
+.wrapper a{
     display: block;
     text-align: center;
     text-decoration: none;
@@ -281,43 +313,79 @@ textarea {
     font-weight: 500;
     letter-spacing: 3px;
 }
-.social-icons {
-    margin-top: 30px;
-}
-.social-icons a {
-    text-decoration: none;
-    font-size: 10px;
-    margin-right: 15px;
-    color: #fff;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-.social-icons a:hover {
-    color: #ff004f;
-    transform: translateY(-5px);
-}
+
 /* ------------- Responsiveness Styles ------------- */
 
 nav .fa-solid{
   display: none;
 }
 
-@media only screen and (min-width: 576px){
+@media only screen and (max-width: 600px){
   .header-text{
     margin-top: 100%;
     font-size: 16px;
   }
   .header-text h1{
-    font-size: 22px;
+    font-size: 30px;
   }
   nav .fa-solid{
     display: block;
     font-size: 25px;
   }
+
+  nav ul{
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right;
+  }
+
+  nav ul li{
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fa-solid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  .sub-title{
+    font-size: 40px;
+  }
+
+  .about-col-1, .about-col-2{
+    flex-basis: 100%;
+  }
+  .about-col-1{
+    margin-bottom: 30px;
+  }
+  .about-col-2{
+    font-size: 14px;
+  }
+  .tab-links{
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+.row {
+  display: flex;
+  flex-direction: column;
 }
+}
+
 @media only screen and (min-width: 768px){
 }
+
 @media only screen and (min-width: 992px){
 }
+
 @media only screen and (min-width: 1200px){
 }
