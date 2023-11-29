@@ -221,9 +221,11 @@ tbody td {
 /* attempt at creating a flippable card start */
 .card {
   width: 300px;
-  height: 400px;
+  height: 500px;
   perspective: 1000px;
   margin: 20px;
+  /* border-radius: 8px; */
+  /* border: 5px solid #115ad9; */
 }
 
 .card-inner {
@@ -235,6 +237,7 @@ tbody td {
 
 .card:hover .card-inner {
   transform: rotateY(180deg);
+
 }
 
 .card-face {
@@ -246,8 +249,8 @@ tbody td {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  border: 5px solid #115ad9;
+  /* border-radius: 8px; */
+  /* border: 5px solid #115ad9; */
 }
 
 .front1 {
@@ -260,7 +263,7 @@ tbody td {
 }
 
 .front2 {
-  background-image: url('../img/Pokedex-App.png');
+  background-image: url('../img/MERN-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   display: block;
@@ -268,6 +271,39 @@ tbody td {
   background-position: center;
 }
 
+.front3 {
+  background-image: url('../img/My-Flix-Client.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  margin: auto;
+  background-position: center;
+}
+.front4 {
+  background-image: url('../img/Meet-App.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  margin: auto;
+  background-position: center;
+}
+
+.front5 {
+  background-image: url('../img/Chat-App-Homescreen.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  margin: auto;
+  background-position: center;
+}
+.front6 {
+  background-image: url('../img/MyFlix-Angular-Client.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  margin: auto;
+  background-position: center;
+}
 .back {
   flex-direction: column;
   transform: rotateY(180deg);
@@ -279,7 +315,7 @@ tbody td {
 /* attempt at creating a flippable card end */
 
 /* old card attempt start */
-.work-item {
+/* .work-item {
   display: flex;
   border: 5px solid #fff;
   border-radius: 10px;
@@ -292,13 +328,13 @@ tbody td {
   border-radius: 15px;
   text-align: center;
   height: 500px;
-}
+} */
 
-.work-item img {
+/* .work-item img {
   width: 150px;
   height: 150px;
   object-fit: cover;
-}
+} */
 
 work-item-content {
   flex: 1;
